@@ -1,0 +1,8 @@
+Accessing props arguments and displaying them
+
+props will return an objecr 
+we know object destructure same as that we can do for
+
+const { title,author } = props
+The values inside props object is destructured and passed to tile and author
+Now while displaying them there is no need to type {props.title} just {title} is eof
