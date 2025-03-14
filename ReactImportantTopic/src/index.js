@@ -20,15 +20,23 @@ function BookList() {
   return (
     <>
       { books.map((book) => {
+        console.log("Book data:",book)
         return <Book book = {book} />
+        console.log("Book data inside:",book)
       })}
-      console.log(books)
+      
     </>
   )
 }
 
 function Book(props){
   console.log(props)
+  return (
+    <>
+      <h1> {props.book.title} </h1>
+      <p> {props.book.author} </p>
+    </>
+  )
 }
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<BookList />);
