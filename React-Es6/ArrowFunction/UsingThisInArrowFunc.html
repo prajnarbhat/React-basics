@@ -8,13 +8,13 @@
                 name : "abc",
                 age : 20,
 
-                // Call another function this show function
+                // Call another function inside this show function
                 show : function() {
                     console.log("this is:",this)
 
-                    //this referes to the current object
+                    //this refers to the current object
 
-                    // Now convert this normal funct to arrow function
+                    // Now convert this normal function to arrow function
                     // Here, setTimeout() uses an arrow function.
                     // Arrow functions do not create their own this.
                     // Instead, they inherit this from their lexical (surrounding) scope.
@@ -28,7 +28,7 @@
             }
             x.show()
 
-            // here this refres to object
+            // here this refers to object
         </script>
     </body>
 </html>
