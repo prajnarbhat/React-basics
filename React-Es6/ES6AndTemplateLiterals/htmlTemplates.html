@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Html templates</title>
+    </head>
+    <body>
+        <p id="demo"></p>
+        <script>
+            let header = ["Heading"];
+            let tags = ["a","b","c"];
+
+            let html = `<h2>${header}</h2>`;
+
+            for ( const x of tags ){
+                html += `<li>${x} </li>`;
+            }
+
+            document.getElementById("demo").innerHTML = html;
+        </script>
+    </body>
+</html>
