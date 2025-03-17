@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title> This in Arrow function(lexical this) </title>
+    </head>
+    <body>
+        <script>
+            const x = {
+                name : "abc",
+                age : 20,
+
+                // Call another function this show function
+                show : function() {
+                    console.log("this is:",this)
+
+                    //this referes to the current object
+                    
+                    // Now pass this to another variable
+
+                    const var1 = this;
+
+                    setTimeout(function() {
+                        console.log("This inside anothe function:",this)                  
+                        // Here this is an window object inside another function
+
+                        console.log("What inside variable:",var1);
+                        //{name: 'abc', age: 20, show: ƒ}
+    
+                        console.log(`Name is ${var1.name} and age is ${var1.age}`)
+                         // Now the output Name is abc age is 20
+
+                })
+                }
+            }
+            x.show()
+
+            // here this refres to object
+        </script>
+    </body>
+</html>

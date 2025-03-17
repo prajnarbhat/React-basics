@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title> This in Arrow function(lexical this) </title>
+    </head>
+    <body>
+        <script>
+            const x = {
+                name : "abc",
+                age : 20,
+
+                // Call another function this show function
+                show : function() {
+                    console.log("this is:",this)
+
+                    //this referes to the current object
+                    // {name:"abc",age:20}
+
+                    setTimeout(function() {
+                        console.log("This inside anothe function:",this)                  
+                        // Here this is an window object inside another function
+                        // Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+                        console.log(`Name is ${this.name} and age is ${this.age}`)
+
+                    // Now the output will be undefined
+                })
+                }
+            }
+            x.show()
+
+            // here this refres to object
+        </script>
+    </body>
+</html>

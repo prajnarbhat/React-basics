@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title> This in Arrow function(lexical this) </title>
+    </head>
+    <body>
+        <script>
+            const x = {
+                name : "abc",
+                age : 20,
+                show : function() {
+                    console.log("this is:",this)
+
+                    //this referes to the current object
+                    // {name:"abc",age:20}
+                    console.log(`Name is ${this.name} and age is ${this.age}`)
+                }
+            }
+            x.show()
+
+            // here this refres to object
+        </script>
+    </body>
+</html>

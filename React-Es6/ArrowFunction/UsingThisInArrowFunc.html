@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title> This in Arrow function(lexical this) </title>
+    </head>
+    <body>
+        <script>
+            const x = {
+                name : "abc",
+                age : 20,
+
+                // Call another function this show function
+                show : function() {
+                    console.log("this is:",this)
+
+                    //this referes to the current object
+
+                    // Now convert this normal funct to arrow function
+                    // This is taken as object from lexical parent 
+                    setTimeout(() => {
+                        // this here is called lexical this
+                        console.log("This inside anothe function:",this)                  
+                        console.log(`Name is ${this.name} and age is ${this.age}`)
+
+                })
+                }
+            }
+            x.show()
+
+            // here this refres to object
+        </script>
+    </body>
+</html>
