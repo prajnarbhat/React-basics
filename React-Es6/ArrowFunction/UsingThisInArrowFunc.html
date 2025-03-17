@@ -15,7 +15,9 @@
                     //this referes to the current object
 
                     // Now convert this normal funct to arrow function
-                    // This is taken as object from lexical parent 
+                    // Here, setTimeout() uses an arrow function.
+                    // Arrow functions do not create their own this.
+                    // Instead, they inherit this from their lexical (surrounding) scope.
                     setTimeout(() => {
                         // this here is called lexical this
                         console.log("This inside anothe function:",this)                  
