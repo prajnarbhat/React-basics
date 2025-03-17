@@ -1,0 +1,25 @@
+<html>
+    <head> <title>Class with methods </title></head>
+    <body>
+        <script>
+            // craete a car class with method name age and returns age of car
+
+            class Car {
+                constructor(name,year){
+                    this.name = name;
+                    this.year = year;
+                }
+                age(x) {
+                    return x - this.year;
+
+                }
+            }
+
+            const myCar = new Car('abc',2014)
+
+            const date = new Date();
+            const year = date.getFullYear();
+            document.write("Get age:",myCar.age(year))
+        </script>
+    </body>
+</html>

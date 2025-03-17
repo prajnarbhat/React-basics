@@ -1,0 +1,24 @@
+<html>
+    <head><title>
+        Class with method name
+    </title></head>
+    <body>
+        <script>
+            class Car {
+                // constructor is automaticaly created when object is created
+                constructor(name){
+                    this.brand = name;
+                }
+
+                // creating a method for car class
+                property1 () {
+                    // method will return the name
+                    return 'method return the brand name' + this.brand;
+                }
+            }
+            const myCar = new Car('Ford');
+            document.write(myCar.property1());
+
+        </script>
+    </body>
+</html>

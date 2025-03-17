@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Class inheritance</title>
+    </head>
+    <body>
+        <script>
+            class Car {
+                constructor(name){
+                    this.name = name;
+                }
+
+            }
+
+            class Car2 extends Car {
+                constructor(name,age){
+                    super(name);
+                    this.age = age;
+                }
+            }
+
+            const myCar = new Car2('Prajna',20)
+            console.log(myCar)
+
+            document.write(myCar.name);
+            document.write("Age is:",myCar.age);
+        </script>
+    </body>
+</html>
