@@ -5,12 +5,12 @@ import ReactDOM from 'react-dom/client';
 // import index.css
 import "./index.css";
 
-// Functional components returns html
+// 1.Functional components returns html.
 function Car() {
   return <h1> Car component </h1>
 }
 
-// Sending props to components
+// 1.Sending props to components.
 // Props are the functional arguments passed to components as arguments
 function Bike(props) {
   console.log("Props here is:", props);
@@ -18,7 +18,7 @@ function Bike(props) {
     <>
       <h1> I have a bike which has a colour {props.color} </h1>
       // Passing components inside another component
-      <Car />
+      <Car/>
     </>
   )
 }
