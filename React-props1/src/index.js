@@ -17,7 +17,7 @@ function Truck(props) {
   console.log(props)
   // Props returns an object
  
-  return <h1> "Brand of car is {props.brand}" </h1>
+  return <h1> Brand of Truck is {props.brand} </h1>
 }
 
 function Garage() {
@@ -80,7 +80,7 @@ function BookList() {
   )
 }
 
-// 6.Accessing content inside tahs using {children}.
+// 6.Accessing content inside tags using {children}.
 function Card({children}) {
   return (
     <h1> contents of card: {children} </h1>
