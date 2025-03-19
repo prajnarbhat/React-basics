@@ -79,6 +79,7 @@ const myElement10 = <h1> {text} </h1>
 let x = 5;
 const myElement11 = <h1> { (x) < 10 ? "Hello" : "Hi" }</h1>
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(myElement);
+root.render(myElement11);
 

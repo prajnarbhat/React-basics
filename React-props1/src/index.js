@@ -80,6 +80,38 @@ function BookList() {
   )
 }
 
+// Accessing content inside tahs using {children}
+function Card({children}) {
+  return (
+    <h1> contents of card: {children} </h1>
+  )
+}
+function App() {
+  return (
+    <>
+      <Card>
+        <h2> Content inside heading </h2>
+        <p> Content inside para </p>
+      </Card>
+    </>
+  )
+}
+
+// Passing object to single prop
+function Userprofile(props) {
+  console.log(props.object.name);
+  return <h2>"Objects name {props.object.name}" </h2>;
+  
+}
+function Profile() {
+  let obj = {name: "abc", age: 20};
+  return (
+    <>
+     <Userprofile object = {obj}/>
+    </>
+  )
+}
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<BookList />);
+root.render(<Profile />);
 
