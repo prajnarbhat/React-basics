@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom/client';
 // import index.css
 import "./index.css";
 
-//   1.React rendering HTML content
+// 1.React rendering HTML content.
 const myElement1 = (
   <>
     <div className = "container">
@@ -15,7 +15,7 @@ const myElement1 = (
   </>
 )
 
-// 2. Using JSX
+// 2.Using JSX.
 const myElement2 = <h1> Body tag </h1>
 
 // 3.What it actually does
@@ -63,7 +63,7 @@ const myElement7 = (
 // 8.All tags must be closed
 const myElement8 = <input type="text"/>
 
-// 9. Classes must be names as 'className'
+// 9.Classes must be names as 'className'
 const myElement9 = <h1 className="myclass"> Hello World </h1>;
 
 // 10. If statement should be places outside JSX
@@ -77,7 +77,7 @@ const myElement10 = <h1> {text} </h1>
 
 // 11.Using ternary operator
 let x = 5;
-const myElement11 = <h1> { (x) < 10 ? "Hello" : "Hi" }</h1>
+const myElement11 = <h1> { (x) < 10 ? "Hello" : "Hi" } </h1>
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
