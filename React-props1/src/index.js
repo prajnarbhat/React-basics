@@ -5,14 +5,14 @@ import ReactDOM from 'react-dom/client';
 //import index.css
 import "./index.css";
 
-// 1. Props are arguments passed to react components
+// 1. Props are arguments passed to react components.
 function Bike(props) {
   console.log(props);
   // Returns an object
   return <p> Color of bike is {props.color} </p>;
 }
 
-// 2. Passing data as props from one component to another component
+// 2. Passing data as props from one component to another component.
 function Truck(props) {
   console.log(props)
   // Props returns an object
@@ -29,7 +29,7 @@ function Garage() {
   )
 }
 
-// 3. Passing props data as variables
+// 3. Passing props data as variables.
 function Sun(props) {
   return <h3> "Get the moon name {props.moonname}" </h3>
 }
@@ -43,7 +43,7 @@ function Moon() {
   )
 }
 
-// 4.Object is passed into component
+// 4.Object is passed into component.
 function Star(props) {
   console.log("Props data:", props.starnames);
   // Retuens an object inside props
@@ -60,7 +60,7 @@ function CountOfStarts() {
   )
 }
 
-// If there are multiple attributes
+// 5.If there are multiple attributes.
 function Book({name,author,children}) {
   return (
   <>
@@ -80,7 +80,7 @@ function BookList() {
   )
 }
 
-// Accessing content inside tahs using {children}
+// 6.Accessing content inside tahs using {children}.
 function Card({children}) {
   return (
     <h1> contents of card: {children} </h1>
@@ -97,7 +97,7 @@ function App() {
   )
 }
 
-// Passing object to single prop
+// 7.Passing object to single prop.
 function Userprofile(props) {
   console.log(props.object.name);
   return <h2>"Objects name {props.object.name}" </h2>;
