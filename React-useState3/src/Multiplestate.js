@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-function App3() {
+function Multiplestate() {
 
     const [brand, setBrand] = useState("abc");
     const [color, setColor] = useState("red");
@@ -14,4 +14,4 @@ function App3() {
     )
 }
 
-export default App3;
+export default Multiplestate;
