@@ -1,0 +1,2 @@
+1.JSX stands for javascript XML
+2.It allows to write and add html to react
