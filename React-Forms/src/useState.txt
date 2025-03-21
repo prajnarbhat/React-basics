@@ -1,0 +1,19 @@
+1. State -> The Application before page rendering will be in one state and after any user interaction state
+value will be changed
+2. Before an event what is the state of an application what is the state after an event
+
+
+function App() {
+    let title = "Micro";
+    function changeState() {
+        console.log("Mini");
+        title = "Mini"
+    }
+    return (
+        <>
+            <h3> Example program for state </h3>
+            <p id="title"> {title} </p>
+            <button type="button" onClick={changeState} > Click me </button>
+        </>
+    )
+}

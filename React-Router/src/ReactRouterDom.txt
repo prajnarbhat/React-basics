@@ -1,0 +1,26 @@
+1.In our application there will be multiple pages, how to navigate to different pages
+2.React-router-dom
+3.npm install react-router-dom
+
+4.Create a home page,about and contact page
+5.App.js will be parent
+6.localhost:3000/about needs to go to about page
+7.import import { BrowserRouter as Router,Route } from "react-router-dom";
+8.Include all components inside Router
+9.<Route path="/"  when goest / it needs to go to element={Home}
+
+Router-link:
+To navigate from one page to another page through application
+for that use link
+import Link
+Link has a parameter to which says to which page it sould navigate
+
+Router-Switch
+localhost:3000/hello there is np page called hello which will give white space
+So we need error page
+We will create route for it, then path for that route is * means all paths
+
+
+
+wrap our content first with <BrowserRouter>.
+Then we define our <Routes>. An application can have multiple <Routes>. Our basic example only uses one.

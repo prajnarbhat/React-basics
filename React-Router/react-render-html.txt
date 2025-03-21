@@ -1,0 +1,9 @@
+React render html in the web page by using function called createEoot and render method
+
+1.createRoot() is a function
+2. It takes one argument that is html element where we need to render or the react componenet should be displayed
+3.createRoot(document.getElementById('root))
+4.render method is called then again to define react 
+
+const root = ReactDom.createRoot(document.getElementById("root));
+root.render(<Component/>);

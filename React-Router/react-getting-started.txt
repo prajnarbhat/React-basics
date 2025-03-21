@@ -1,0 +1,15 @@
+1. React is a js library for building user interface
+2.Libraray is a collection of reusuable code that can be used as needed in our application
+3.Frameork provide structured environment for building application.It gives predifined functionalities
+
+Ex: Angular is a framework it provides the build in solutions for coponent structure,routing and state managment
+React is a libarary that provide tools for building ui. We need aditional libraray for routing and all
+
+Why react:
+1.React is a single page application
+2.Virtual Dom
+
+4. create-react-app includes built tools such as webpack, Babel(Babel, allows us to write JSX syntax and ES6 in older browsers
+), and ESLint.
+
+4.React application created using create-react-app
