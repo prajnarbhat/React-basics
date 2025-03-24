@@ -4,6 +4,7 @@ function Controlledinputs() {
     function handleSubmit(e) {
         e.preventDefault();
         console.log("Form submit")
+        console.log(name,age)
     }
 
     const [name, setName] = useState("");
