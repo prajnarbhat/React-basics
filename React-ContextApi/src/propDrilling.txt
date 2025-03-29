@@ -1,0 +1,10 @@
+// 1.Props drilling is the way we pass the data from the parent component
+to all nested child component through multiple layers, wven though some components do not need the data
+
+// So when have data in app which needs to a particular component like grandchild of that app
+
+// We have a context api where we can pass the data through the component tree without having to pass the props manually at each level
+
+1. Create a createContext object
+2. Create a provider component => This will provide the context value to its children
+3.useContext hook => allow to consume the context
