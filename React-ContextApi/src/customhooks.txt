@@ -1,0 +1,5 @@
+1.Custom hook must start with a word use
+2.Custom hook should utilise react built in hook
+3.Avoid side effects ouside hook
+   => Side effect here means fetching data should be manages within hook useEffect or others
+4.
