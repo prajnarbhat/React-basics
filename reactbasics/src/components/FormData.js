@@ -7,56 +7,53 @@ const FormData = () => {
     const [ workoutType, setWType] = useState("");
     const [ workoutMin, setWMin] = useState("")
 
+    const mergeWorktype = (workouts) => {
 
-    const mergedWorkoutMin = (workouts) => {
+        return workouts.reduce((acc,workout) => {
+            let existingWorkouttype = acc.find(w => w.workoutType == workout.workoutType)
 
-        return workouts.reduce((acc,workouts) => {
-            let exisistingworkouttye = acc.find(w => w.workoutType == workouts.workoutType);
-
-            if(exisistingworkouttye) {
-                exisistingworkouttye.workoutMin += Number(workouts.workoutMin);
+            console.log("Exising wtype data:", existingWorkouttype);
+            if(existingWorkouttype) {
+                existingWorkouttype.workoutMin += Number(workout.workoutMin)
             }
-
             else {
-                acc.push({...workouts, workoutMin: Number(workouts.workoutMin)})
+                acc.push({...workout,workoutMin: Number(workout.workoutMin)})
             }
             return acc;
         },[])
     }
 
 
-
-
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Form submitted");
-        const newuserData = {
-            workoutType : workoutType,
-            workoutMin : workoutMin
+
+        console.log("Form submited")
+
+        const newWorkouts = {
+            workoutType: workoutType,
+            workoutMin: workoutMin
         };
-        
-        // let result2 = [...data,{userName,workouts:[newuserData]}]
 
         const updatedData = data.map(user => {
-            if(user.userName === userName) {
-                const updatedworkouts = mergedWorkoutMin([...user.workouts,newuserData]);
-                return {...user, workouts: updatedworkouts}
+            if ( user.userName === userName) {
+                const dataworktype = mergeWorktype([...user.workouts,newWorkouts])
+                return {...user,workouts: dataworktype}
             }
             return user;
         })
 
-        if(!data.some(user => user.userName === userName)) {
-            updatedData.push({userName, workouts: [newuserData]})
+        if(!data.some(user => user.userName == userName)) {
+            updatedData.push({userName, workouts: [newWorkouts]})
         }
-        
-        
+
         setData(updatedData)
-        console.log(updatedData)
+
+        console.log("Updated Data:",updatedData)
     }
 
 
-
     return (
+        <div>
         <div>
             <form onSubmit={handleSubmit}>
                 <div className="form-element">
@@ -78,6 +75,7 @@ const FormData = () => {
                 </div>
                 <button type="submit"> Submit </button>
             </form>
+        </div>
         </div>
     )
 }
