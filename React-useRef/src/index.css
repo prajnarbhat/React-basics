@@ -10,11 +10,3 @@ body {
 .component-one {
     color : blue;
 }
-
-.pagination_selected {
-    background-color: blue;
-}
-
-.pagination_disabled {
-    opacity: 0;
-}

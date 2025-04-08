@@ -1,11 +1,15 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { DataContext } from "./ContextProvider";
+
 
 const FormData = () => {
 
-    const [ data, setData] = useState([]);
+    const { data, setData } = useContext(DataContext);
     const [ userName, setUserName] = useState("")
     const [ workoutType, setWType] = useState("");
     const [ workoutMin, setWMin] = useState("")
+    const navigate = useNavigate();
 
     const mergeWorktype = (workouts) => {
 
@@ -49,6 +53,8 @@ const FormData = () => {
         setData(updatedData)
 
         console.log("Updated Data:",updatedData)
+
+        navigate("/TableData")
     }
 
 
