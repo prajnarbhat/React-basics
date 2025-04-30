@@ -1,19 +1,29 @@
-import React from "react";
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import { ContextProvider } from "./ContextProvider";
-import FormData from "./FormData";
-import TableData from "./TableData";
+import React, { useState } from "react";
+
+
 
 const App = () =>{
+
+    const [item, setItem] = useState([])
+    const [input, setInput] = useState("")
+    const handleSubmit =  () => {
+        if(input.trim() === "") return;
+
+        setItem([...item,input])
+        setInput("")
+
+    }
     return (
-        <ContextProvider>
-        <Router>
-            <Routes>
-                <Route path="/" element={<FormData/>}></Route>
-                <Route path="/TableData" element={<TableData/>}/>
-            </Routes>
-        </Router>
-        </ContextProvider>
+        <>
+            <div>
+                <input type="text" value={input} 
+                    onChange={(e) => setInput(e.target.value)}/>
+                <button type="button" onClick={handleSubmit}> Add Item</button>
+            </div>
+            <div>
+                 {item}
+            </div>
+        </>
     )
 }
 

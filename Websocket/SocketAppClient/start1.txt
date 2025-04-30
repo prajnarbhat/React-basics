@@ -1,0 +1,7 @@
+1.SocketAppclient have reat app
+2.Server has package.json through => npm init -y
+
+3.Create two terminal SocketAppClient and socketAppServer
+4.In server install=> npm i socket.io
+                      npm i nodemon
+5.In client => npm i socket.io-client

@@ -1,0 +1,24 @@
+1.Websocket is the persistent connection between client and server
+2.Client and server can send data at any time
+3.server or the client neither need to wait for data transfer
+4.Stock vales changes frequently 
+5.stock values changes frequetly because help of web socket
+6.https://www.wsj.com/market-data/stocks
+In here the daa keeps on changing
+In a single connection a lot od data transfer takes place
+
+7.While messaging there is no need of creating connection every time we send data
+
+
+HTTP:
+1.It is a stateless unidireactional that is clent send a request server
+will provide a response again if we need a new data again the client
+will need to send the request
+2.Problem: chatting appl will lead into issue while getting data everytime is diificult
+
+
+So we use Websocket
+But first request from client to server is an http, then server give a response and the handhsake will be completed
+In this single connetction it can send and get data
+Websocket can send request at any time
+It is statefull and bidrectional and fullduplex(same time client and server can talk)
